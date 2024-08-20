@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees expenses count</title>
+</head>
+
+<body>
+    <script>
+
+        let employees = [
+            { name: "sushil", expenses: [100, 200, 300, 400] },
+            { name: "yogesh", expenses: [150, 250, 350, 450] },
+            { name: "rushik", expenses: [200, 300, 400, 500] },
+            { name: "rahul", expenses: [250, 350, 450, 550] },
+            { name: "sahil", expenses: [300, 400, 500, 600] }
+        ];
+
+        function calculateTotalExpenses(employees) {
+            for (let i = 0; i < employees.length; i++) {
+                let total = 0;
+
+                for (let j = 0; j < employees[i].expenses.length; j++) {
+                    total += employees[i].expenses[j];
+                }
+
+                document.write("Total expenses for " + employees[i].name + ": " + total + "<br>");
+            }
+        }
+        
+        calculateTotalExpenses(employees);
+
+
+    </script>
+</body>
+
+</html>
